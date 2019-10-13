@@ -5,18 +5,18 @@
 ### 非同步執行 async,動態更新
 JavaScript is a scripting language that enables you to create dynamically updating content.
 
-可與php做比較看看.
+可與php做比較看看. 
 ***
 
 ### 選取Element可用
-document.querySelector({tag/id/class/attrbuite});
+document.querySelector({tag/id/class/attrbuite}); 
 document.querySelectorAll({tag/id/class/attrbuite});
 
 以前會用 
-document.getElementById #
-document.getElementsByClassName .
-document.getElementsByTagName 
-document.getElementsByName
+document.getElementById # 
+document.getElementsByClassName . 
+document.getElementsByTagName  
+document.getElementsByName 
 ***
 
 ### 新增事件可用
@@ -35,24 +35,24 @@ eventName: click , DOMContentLoaded
 
 ### 讀取順序
 The JavaScript is executed by the browser's JavaScript engine, after the HTML and CSS have been assembled and put together into a web page. This ensures that the structure and style of the page are already in place by the time the JavaScript starts to run.
-若先執行js,Dom及Style還沒渲染好，可能會造成錯誤，
-因通常會加上DOMContentLoaded的事件，確保js是執行在html,css讀取完之後。
+若先執行js,Dom及Style還沒渲染好，可能會造成錯誤， 
+通常會加上DOMContentLoaded的事件，確保js是執行在html,css讀取完之後。 
 
 *** 
 ### Browser security
-Each browser tab is its own separate bucket for running code in (these buckets are called "execution environments" in technical terms) — this means that in most cases the code in each tab is run completely separately, and the code in one tab cannot directly affect the code in another tab — or on another website.
-為確保安全性，js不能跨網頁、跨網域執行。
+Each browser tab is its own separate bucket for running code in (these buckets are called "execution environments" in technical terms) — this means that in most cases the code in each tab is run completely separately, and the code in one tab cannot directly affect the code in another tab — or on another website. 
+為確保安全性，js不能跨網頁、跨網域執行。 
 
 >Note: There are ways to send code and data between different websites/tabs in a safe manner, but these are advanced techniques that we won't cover in this course.
 ***
 
 ### 執行順序
-由上而下，宣告變數需在使用變數之前。
-但要注意*非同步執行*會在執行完成前，繼續執行後續的程式。
+由上而下，宣告變數需在使用變數之前。 
+但要注意*非同步執行*會在執行完成前，繼續執行後續的程式。 
 ***
 
 ### 直譯、編譯
-js是直譯語言
+js是直譯語言  
 ***
 
 ### 載入js
@@ -61,14 +61,14 @@ asnyc : will download the script without blocking rendering the page and will ex
 ***
 
 ## Inline JavaScript handlers
-`function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
-  document.body.appendChild(para);
+`function createParagraph() { 
+  let para = document.createElement('p'); 
+  para.textContent = 'You clicked the button!'; 
+  document.body.appendChild(para); 
 }`
-`<button onclick="createParagraph()">Click me!</button>`
+`<button onclick="createParagraph()">Click me!</button>` 
 *Please don't do this, however. ?*
-目前多半框架都是這種形式.
+目前多半框架都是這種形式. 
 ***
 
 ## A first splash into JavaScript
@@ -106,15 +106,15 @@ Upon looking at this brief, the first thing we can do is to start breaking it do
 * 文字與數值的比較.
 
 ### Element操作
-ele.value [filed]
-ele.textContent [paragraphy]
-ele.style.{backgroundColor/fontSize...} [style]
+ele.value [filed] 
+ele.textContent [paragraphy] 
+ele.style.{backgroundColor/fontSize...} [style] 
 style 會用峰駝式命名
 
 
 ## Debug
-console.log()
-alert()
+console.log() 
+alert() 
 可以把整個元件印出來看
 
 ## Storing the information you need — Variables
