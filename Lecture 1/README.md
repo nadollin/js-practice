@@ -27,6 +27,7 @@ document.getElementsByName
 
 ### 新增事件可用
 addEventListener({eventName}), {function});
+
 eventName: click , DOMContentLoaded
 ***
 
@@ -47,6 +48,7 @@ The JavaScript is executed by the browser's JavaScript engine, after the HTML an
 *** 
 ### Browser security
 Each browser tab is its own separate bucket for running code in (these buckets are called "execution environments" in technical terms) — this means that in most cases the code in each tab is run completely separately, and the code in one tab cannot directly affect the code in another tab — or on another website. 
+
 為確保安全性，js不能跨網頁、跨網域執行。 
 
 >Note: There are ways to send code and data between different websites/tabs in a safe manner, but these are advanced techniques that we won't cover in this course.
@@ -54,7 +56,9 @@ Each browser tab is its own separate bucket for running code in (these buckets a
 
 ### 執行順序
 由上而下，宣告變數需在使用變數之前。 
+
 但要注意*非同步執行*會在執行完成前，繼續執行後續的程式。 
+
 ***
 
 ### 直譯、編譯
@@ -67,11 +71,11 @@ asnyc : will download the script without blocking rendering the page and will ex
 ***
 
 ## Inline JavaScript handlers
-`function createParagraph() { 
-  let para = document.createElement('p'); 
-  para.textContent = 'You clicked the button!'; 
-  document.body.appendChild(para); 
-}`
+`function createParagraph() { `
+ ` let para = document.createElement('p'); `
+  `para.textContent = 'You clicked the button!'; `
+  `document.body.appendChild(para); `
+`}`
 `<button onclick="createParagraph()">Click me!</button>` 
 *Please don't do this, however. ?*
 目前多半框架都是這種形式. 
@@ -106,6 +110,7 @@ Upon looking at this brief, the first thing we can do is to start breaking it do
 ### comparison operators.
 1. ===
 2. !==
+
 <https://dorey.github.io/JavaScript-Equality-Table/>
 特別注意 
 * 被判定為false的值有哪些.
@@ -113,14 +118,17 @@ Upon looking at this brief, the first thing we can do is to start breaking it do
 
 ### Element操作
 ele.value [filed] 
+
 ele.textContent [paragraphy] 
+
 ele.style.{backgroundColor/fontSize...} [style] 
+
 style 會用峰駝式命名
 
 
 ## Debug
-console.log() 
-alert() 
+`console.log() `
+`alert() `
 可以把整個元件印出來看
 
 ## Storing the information you need — Variables
@@ -128,41 +136,42 @@ We say variables contain values. This is an important distinction to make. Varia
 
 ### 變數宣告 
 （與swift不一樣）
+
 let 區域變數 //ES6
+
 var 全域變數
+
 const 宣告變數 //ES6
 
-`
-function f() {
-  let x = 1;
-  console.log(x);
-  {
-    let x = 2;
-    console.log(x);
-  }
-  console.log(x);
-}
-f()
-// 1
-// 2
-// 1
-`
+`function f() {`
+  `let x = 1;`
+  `console.log(x);`
+  `{`
+    `let x = 2;`
+    `console.log(x);`
+  `}`
+  `console.log(x);`
+`}`
+`f()`
+`// 1`
+`// 2`
+`// 1`
 
-`
-function f() {
-  var x = 1;
-  console.log(x);
-  {
-    var x = 2;
-    console.log(x);
-  }
-  console.log(x);
-}
-f()
-// 1
-// 2
-// 2
-`
+
+`function f() {`
+`  var x = 1;`
+`  console.log(x);`
+`  {`
+`    var x = 2;`
+`    console.log(x);`
+`  }`
+`  console.log(x);`
+`}`
+`f()`
+`// 1`
+`// 2`
+`// 2`
+
 ### 命名規則
 1. Just using Latin characters (0-9, a-z, A-Z) 
 2. Lower camel case
@@ -175,17 +184,18 @@ f()
 3. boolean
 4. array
 5. object
+
 (注意：js是弱型別語言)
+
 string + number -> string
 
 ## Basic math in JavaScript — numbers and operators
 
 js的數字沒有分型別
+
 浮點數問題：不一定準確
 
 power : **
 
-前乘除後加減 
-養成好習慣加上括號()
+前乘除後加減 ,養成好習慣加上括號()
 
-## Handling text — strings in JavaScript
