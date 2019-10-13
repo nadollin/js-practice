@@ -10,13 +10,19 @@ JavaScript is a scripting language that enables you to create dynamically updati
 
 ### 選取Element可用
 document.querySelector({tag/id/class/attrbuite}); 
+
 document.querySelectorAll({tag/id/class/attrbuite});
 
 以前會用 
+
 document.getElementById # 
+
 document.getElementsByClassName . 
+
 document.getElementsByTagName  
+
 document.getElementsByName 
+
 ***
 
 ### 新增事件可用
